@@ -1,0 +1,467 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Employee Verification - Sample</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+.page {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding: 12px 20px 5px;
+}
+
+
+/* LOGO */
+
+.logo-box {
+    width: 180px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.logo-box img {
+    width: 155px;
+    height: 115px;
+    object-fit: contain;
+}
+
+
+/* ORGANIZATION TEXT */
+
+.organization-name {
+    text-align: left;
+    padding-left: 5px;
+}
+
+.amharic-name {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.english-name {
+    font-size: 21px;
+    font-weight: bold;
+    color: #1685a0;
+    white-space: nowrap;
+}
+
+.bureau-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1685a0;
+    margin-top: 4px;
+    white-space: nowrap;
+}
+
+
+/* SCHOOL NAME */
+
+.school-name {
+    text-align:left;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 3px 0 15px;
+}
+
+
+/* =========================
+   INFORMATION AREA
+========================= */
+
+.information {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+
+/* LEFT TABLE */
+
+.details {
+    width: 70%;
+}
+
+.row {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* ALTERNATING ROWS */
+
+.row:nth-child(odd) {
+    background: #eeeeee;
+}
+
+.row:nth-child(even) {
+    background: #ffffff;
+}
+
+
+/* LABEL */
+
+.label {
+    width: 50%;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* VALUE */
+
+.value {
+    width: 50%;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-section {
+    width: 30%;
+    min-height: 350px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border-left: 1px solid #ddd;
+}
+
+
+/* PERSON PHOTO */
+
+.photo {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* VERIFIED TEXT */
+
+.verified {
+    margin-top: 15px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   WATERMARK
+========================= */
+
+.watermark {
+    position: absolute;
+
+    top: 130%;
+    left: 50%;
+
+    transform:
+        translate(-50%)
+        rotate(-40deg);
+
+    font-size: 42px;
+    width: 900px;
+    text-align: center;
+    font-weight: bold;
+
+    color: rgba(100,100,100,0.12);
+
+    white-space: nowrap;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 10px 5px 5px;
+    }
+
+    .logo-box {
+        width: 115px;
+    }
+
+    .logo-box img {
+        width: 105px;
+        height: 85px;
+    }
+
+    .amharic-name {
+        font-size: 10px;
+    }
+
+    .english-name {
+        font-size: 12px;
+    }
+
+    .bureau-name {
+        font-size: 10px;
+    }
+
+    .school-name {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .label,
+    .value {
+        font-size: 11px;
+    }
+
+    .label {
+        padding-left: 10px;
+    }
+
+    .row {
+        height: 48px;
+    }
+
+    .photo {
+        width: 130px;
+        height: 130px;
+    }
+
+    .verified {
+        font-size: 17px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="page">
+
+
+    <!-- SAMPLE MARKING -->
+
+    <div class="watermark">
+       CITY OF ADDIS ABABA GOVERNMENT EDUCATION BUREAU
+    </div>
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <!-- LOGO -->
+
+        <div class="logo-box">
+
+            <img
+                src="image/logo.jpg"
+                alt="Organization Logo">
+
+        </div>
+
+
+        <!-- ORGANIZATION NAME -->
+
+        <div class="organization-name">
+            <div class="amharic-name">
+                የአዲስ አበባ ከተማ አስተዳደር ትምህርት ቢሮ
+            </div>
+
+            <div class="english-name">
+                BIROO BARNOOTAA BULCHINSA MAGAALAA FINFINNEE
+            </div>
+
+            <div class="bureau-name">
+                CITY GOVERNMENT OF ADDIS ABABA EDUCATION BUREAU
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SCHOOL -->
+
+    <div class="school-name">
+        GELAN GURA PRIMARY  SCHOOL
+    </div>
+
+
+    <!-- INFORMATION -->
+
+    <div class="information">
+
+
+        <!-- TABLE -->
+
+        <div class="details">
+
+
+            <div class="row">
+
+                <div class="label">
+                    FULL NAME
+                </div>
+
+                <div class="value">
+                    DESTA TURUNA TOLA
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="label">
+                    Sub City
+                </div>
+
+                <div class="value">
+                    Kelem Wollega Zone
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="label">
+                    Gender
+                </div>
+
+                <div class="value">
+                    Male
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="label">
+                    Department
+                </div>
+
+                <div class="value">
+                    Chemistry
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="label">
+                    Position
+                </div>
+
+                <div class="value">
+                    Teacher
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="label">
+                    Date of Birth
+                </div>
+
+                <div class="value">
+                    16-07-1987
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="label">
+                    Phone Number
+                </div>
+
+                <div class="value">
+                    915928910
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- PHOTO -->
+
+        <div class="photo-section">
+
+            <img
+                src="image/employee photo.jpg"
+                alt="Sample Employee"
+                class="photo">
+
+            <div class="verified">
+                Verified Employee
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
